@@ -1,0 +1,10 @@
+date_time,target_name,host,check_type,port,status,details
+2026-09-08 14:20:00,Google DNS,8.8.8.8,PING,-,OK,Доступен
+2026-09-08 14:20:00,Google DNS,8.8.8.8,TCP,53,OK,Открыт
+2026-09-08 14:20:00,Google DNS,8.8.8.8,TCP,443,OK,Открыт
+2026-09-08 14:20:00,Cloudflare DNS,1.1.1.1,PING,-,OK,Доступен
+2026-09-08 14:20:00,Cloudflare DNS,1.1.1.1,TCP,53,OK,Открыт
+2026-09-08 14:20:00,Cloudflare DNS,1.1.1.1,TCP,443,OK,Открыт
+2026-09-08 14:20:00,GitVerse,gitverse.ru,PING,-,OK,Доступен
+2026-09-08 14:20:00,GitVerse,gitverse.ru,TCP,80,OK,Открыт
+2026-09-08 14:20:00,GitVerse,gitverse.ru,TCP,443,OK,Открыт

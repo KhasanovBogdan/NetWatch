@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NetWatch — NetWatch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="header-inner">
+<div class="logo">NetWatch</div>
+<nav><ul><li><a href="index.html">Главная</a></li><li><a href="about.html">О проекте</a></li><li><a href="members.html">Участники</a></li><li><a href="journal.html">Журнал</a></li><li><a href="resources.html">Ресурсы</a></li><li><a href="netwatch.html" class="active">NetWatch (код)</a></li></ul></nav>
+</div>
+</header>
+<main>
+<section>
+<h2>NetWatch: техническая реализация</h2>
+<p>Программа проверяет доступность сетевых узлов с помощью ping и проверяет открытость TCP-портов через модуль socket, после чего сохраняет результаты в CSV-журнал.</p>
+
+<img src="images/architecture.png" alt="Схема архитектуры NetWatch" class="architecture-image">
+
+<h3>Пример кода: проверка TCP-порта</h3>
+<pre><code>def check_port(host, port, timeout=2.0):
+    try:
+        with socket.create_connection((host, port), timeout=timeout):
+            return True, "Открыт"
+    except socket.timeout:
+        return False, "Тайм-аут"
+    except ConnectionRefusedError:
+        return False, "Закрыт"
+    except OSError:
+        return False, "Недоступен"
+</code></pre>
+
+<h3>Пример журнала проверок</h3>
+<table>
+<tr><th>Дата и время</th><th>Узел</th><th>Тип проверки</th><th>Порт</th><th>Статус</th></tr>
+<tr><td>2026-09-08 14:20:00</td><td>Google DNS</td><td>PING</td><td>-</td><td>OK</td></tr>
+<tr><td>2026-09-08 14:20:00</td><td>Google DNS</td><td>TCP</td><td>443</td><td>OK</td></tr>
+<tr><td>2026-09-08 14:20:00</td><td>GitVerse</td><td>TCP</td><td>443</td><td>OK</td></tr>
+</table>
+
+<h3>Модификация проекта</h3>
+<ul>
+<li>Гибкий список целей мониторинга без изменения основной логики.</li>
+<li>Раздельная диагностика ошибок (тайм-аут, ошибка DNS, отказ в соединении).</li>
+<li>Накопительный журнал с историей проверок.</li>
+<li>Кроссплатформенная поддержка Windows и Unix-подобных систем.</li>
+</ul>
+
+<p>Полный туториал с пошаговыми инструкциями находится в файле <code>docs/netwatch_tutorial.md</code> в репозитории проекта.</p>
+</section>
+
+</main>
+<footer>
+&copy; 2026 Мерданов Худайназар. Проектная (учебная) практика.
+</footer>
+</body>
+</html>

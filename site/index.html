@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Главная — NetWatch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="header-inner">
+<div class="logo">NetWatch</div>
+<nav><ul><li><a href="index.html" class="active">Главная</a></li><li><a href="about.html">О проекте</a></li><li><a href="members.html">Участники</a></li><li><a href="journal.html">Журнал</a></li><li><a href="resources.html">Ресурсы</a></li><li><a href="netwatch.html">NetWatch (код)</a></li></ul></nav>
+</div>
+</header>
+<main>
+<section class="hero">
+<h1>NetWatch — система мониторинга сетевых ресурсов</h1>
+<p>Учебный проект в рамках проектной (учебной) практики. Программа проверяет доступность сетевых узлов и TCP-портов, сохраняет результаты в журнал и демонстрирует базовые принципы построения систем мониторинга сетевой инфраструктуры.</p>
+</section>
+
+<section>
+<h2>Аннотация проекта</h2>
+<p>Современная инфраструктура зависит от постоянной доступности серверов и сетевых сервисов. NetWatch — это прототип, показывающий, как можно проверять состояние узлов с помощью ping и TCP-соединений, а затем сохранять историю проверок для дальнейшего анализа.</p>
+
+<div class="card-grid">
+<div class="card">
+<h3>Проверка доступности</h3>
+<p>Проверка узлов по ICMP (ping) с определением статуса ответа.</p>
+</div>
+<div class="card">
+<h3>Проверка портов</h3>
+<p>Проверка TCP-портов через модуль socket с диагностикой ошибок.</p>
+</div>
+<div class="card">
+<h3>Журнал результатов</h3>
+<p>Сохранение истории проверок в CSV-файл для последующего анализа.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Ключевая информация</h2>
+<ul>
+<li>Язык реализации: Python 3.</li>
+<li>Формат хранения результатов: CSV.</li>
+<li>Тип практики: проектная (учебная), 72 академических часа.</li>
+<li>Вариативная часть: реализация технологии «с нуля».</li>
+</ul>
+</section>
+
+</main>
+<footer>
+&copy; 2026 Мерданов Худайназар. Проектная (учебная) практика.
+</footer>
+</body>
+</html>
